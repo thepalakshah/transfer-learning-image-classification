@@ -1,0 +1,157 @@
+# Transfer Learning for Image Classification
+
+Fine-tuning pre-trained Convolutional Neural Networks for flower species classification, with parallel implementations in both TensorFlow and PyTorch frameworks.
+
+## 📊 Project Overview
+
+This project demonstrates transfer learning techniques using state-of-the-art pre-trained CNN models (ResNet50, VGG16, MobileNetV2) for image classification. Achieved 85%+ accuracy on a 5-class flower classification task.
+
+## 🚀 Implementation Details
+
+### Models Implemented
+
+**Pre-trained CNNs from ImageNet:**
+- **ResNet50** - Deep residual network (50 layers)
+- **VGG16** - Visual Geometry Group architecture
+- **MobileNetV2** - Efficient mobile-optimized CNN
+
+### Frameworks
+
+Implemented in **both** frameworks for comparison:
+- **TensorFlow / Keras** implementation
+- **PyTorch** implementation
+
+### Training Strategy
+
+- Froze pre-trained layers (transfer learning)
+- Added custom classification head for 5 classes
+- Data augmentation for better generalization
+- 75/25 train-test split
+- 20 epochs with early stopping
+
+## 📊 Dataset
+
+**Flowers Recognition Dataset**
+- **Source:** [Kaggle - Flowers Recognition](https://www.kaggle.com/datasets/alxmamaev/flowers-recognition)
+- **Total Images:** 4,317
+- **Classes:** 5 (Daisy, Dandelion, Rose, Sunflower, Tulip)
+- **Images per class:** ~800-900
+
+## 🛠️ Technologies
+
+- **TensorFlow 2.x / Keras** - TF implementation
+- **PyTorch & torchvision** - PyTorch implementation
+- **Pre-trained Models:** ImageNet weights
+- **Data Processing:** PIL, OpenCV, NumPy
+- **Visualization:** Matplotlib
+
+## 📈 Results
+
+| Model | Framework | Accuracy | Parameters |
+|-------|-----------|----------|------------|
+| MobileNetV2 | TensorFlow | **85.56%** | 2.9M (trainable) |
+| VGG16 | TensorFlow | 81.11% | 14.7M |
+| ResNet50 | PyTorch | 85.56% | 23.5M |
+
+**Key Findings:**
+- MobileNetV2 achieved best results despite being the smallest model
+- Transfer learning significantly reduced training time
+- Both frameworks produced comparable results
+
+## 💻 Installation & Usage
+```bash
+# Clone repository
+git clone https://github.com/thepalakshah/transfer-learning-image-classification.git
+cd transfer-learning-image-classification
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Download dataset from Kaggle
+# Extract to ./data/flowers/
+
+# Run notebook
+jupyter notebook flower_classification_cnn.ipynb
+```
+
+## 📁 Repository Structure
+```
+├── flower_classification_cnn.ipynb   # Main implementation notebook
+├── requirements.txt                  # Python dependencies
+├── .gitignore                        # Exclude data/models
+└── README.md                         # Documentation
+```
+
+## 🔧 Technical Highlights
+
+- **Transfer Learning:** Leveraged ImageNet pre-trained weights
+- **Data Augmentation:** Rotation, flipping, scaling for robustness
+- **Model Comparison:** Evaluated multiple architectures
+- **Framework Flexibility:** Demonstrated both TensorFlow and PyTorch
+- **Optimization:** Compared different optimizers (Adam, SGD, RMSProp)
+- **Evaluation:** Confusion matrices, classification reports, accuracy curves
+
+## 🎯 Use Cases
+
+- Template for fine-tuning pre-trained models
+- Image classification pipeline for custom datasets
+- Framework comparison for model selection
+- Transfer learning baseline for computer vision tasks
+
+## 👤 Author
+
+**Palak Shah** - Data Engineer & ML Practitioner
+
+🔗 [LinkedIn](https://linkedin.com/in/thepalakshah) | 🌐 [Portfolio](https://palakshahportfolio.netlify.app/) | 💻 [GitHub](https://github.com/thepalakshah)
+
+---
+
+## **Requirements.txt for Each Repo**
+
+**For NYC Taxi Repo:**
+```
+tensorflow>=2.13.0
+pandas>=1.5.0
+numpy>=1.24.0
+matplotlib>=3.7.0
+seaborn>=0.12.0
+scikit-learn>=1.3.0
+jupyter>=1.0.0
+tensorflow-data-validation>=1.13.0
+apache-beam>=2.50.0
+fastparquet>=2023.0.0
+```
+
+**For Image Classification Repo:**
+```
+tensorflow>=2.13.0
+torch>=2.0.0
+torchvision>=0.15.0
+numpy>=1.24.0
+matplotlib>=3.7.0
+Pillow>=10.0.0
+scikit-learn>=1.3.0
+jupyter>=1.0.0
+opencv-python>=4.8.0
+
+## 📊 Dataset
+
+**Flowers Recognition Dataset**
+- **Source:** [Kaggle - Flowers Recognition](https://www.kaggle.com/datasets/alxmamaev/flowers-recognition)
+- **Total Images:** 4,317
+- **Classes:** 5 (Daisy, Dandelion, Rose, Sunflower, Tulip)
+
+### How to Get the Dataset
+
+1. Download from Kaggle: [Download Link](https://www.kaggle.com/datasets/alxmamaev/flowers-recognition)
+2. Extract the ZIP file
+3. Place the `flowers` folder in your project directory:
+```
+   transfer-learning-image-classification/
+   ├── flowers/
+   │   ├── daisy/
+   │   ├── dandelion/
+   │   ├── rose/
+   │   ├── sunflower/
+   │   └── tulip/
+   └── flower_classification_cnn.ipynb
