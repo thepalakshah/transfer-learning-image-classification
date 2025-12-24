@@ -98,6 +98,28 @@ jupyter notebook flower_classification_cnn.ipynb
 - Framework comparison for model selection
 - Transfer learning baseline for computer vision tasks
 
+## 📊 Dataset
+
+**Flowers Recognition Dataset**
+- **Source:** [Kaggle - Flowers Recognition](https://www.kaggle.com/datasets/alxmamaev/flowers-recognition)
+- **Total Images:** 4,317
+- **Classes:** 5 (Daisy, Dandelion, Rose, Sunflower, Tulip)
+
+### How to Get the Dataset
+
+1. Download from Kaggle: [Download Link](https://www.kaggle.com/datasets/alxmamaev/flowers-recognition)
+2. Extract the ZIP file
+3. Place the `flowers` folder in your project directory:
+```
+   transfer-learning-image-classification/
+   ├── flowers/
+   │   ├── daisy/
+   │   ├── dandelion/
+   │   ├── rose/
+   │   ├── sunflower/
+   │   └── tulip/
+   └── flower_classification_cnn.ipynb
+
 ## 👤 Author
 
 **Palak Shah** - Data Engineer & ML Practitioner
@@ -133,25 +155,3 @@ Pillow>=10.0.0
 scikit-learn>=1.3.0
 jupyter>=1.0.0
 opencv-python>=4.8.0
-
-## 📊 Dataset
-
-**Flowers Recognition Dataset**
-- **Source:** [Kaggle - Flowers Recognition](https://www.kaggle.com/datasets/alxmamaev/flowers-recognition)
-- **Total Images:** 4,317
-- **Classes:** 5 (Daisy, Dandelion, Rose, Sunflower, Tulip)
-
-### How to Get the Dataset
-
-1. Download from Kaggle: [Download Link](https://www.kaggle.com/datasets/alxmamaev/flowers-recognition)
-2. Extract the ZIP file
-3. Place the `flowers` folder in your project directory:
-```
-   transfer-learning-image-classification/
-   ├── flowers/
-   │   ├── daisy/
-   │   ├── dandelion/
-   │   ├── rose/
-   │   ├── sunflower/
-   │   └── tulip/
-   └── flower_classification_cnn.ipynb
